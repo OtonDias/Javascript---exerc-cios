@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+    <title>Padrões Web</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, rgb(29, 136, 207), rgb(110, 25, 143));
+            text-align: center;
+            color: #fff;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1em;
+            border-radius: 10px;
+        }
+        button{
+            background-color: slateblue;
+            color: #fff;
+            border: none;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 1px 1px 6px black;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: steelblue;
+        }
+        .final-step,
+        .second-step{
+            display: none;
+        }
+        input{
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+        #resultado{
+            font-size: 25px;
+        }
+    </style>
+ </head>
+ <body>
+  <a  href="index.html">Calcular media</a>
+  <a  href="imc.html"> Índice de Massa Corporal (IMC) </a>
+  <a  href="Javascript.html">Lista</a>
+   <p>Primeira nota</p> <input id="nota1" type="number"> <br />
+   <p>Segunda  nota</p> <input id="nota2" type="number"> <br />
+   <button onclick="media()">Calcular Media</button>
+
+   <script type="text/javascript">
+
+    function media(){
+     var nota1 = parseFloat(document.getElementById("nota1").value);
+     var nota2 = parseFloat(document.getElementById("nota2").value);
+
+     var media = (nota1 + nota2)/2 ;
+
+     if(media >= 7)
+      if(media==10)
+       alert("Uau! Aprovado com distin��o");
+      else
+       alert("Parabens, aprovado! Media "+media);
+     else
+      alert("Reprovado!")
+
+    }
+ </script>
+
+ </body>
+</html>

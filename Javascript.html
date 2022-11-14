@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Padrões Web</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, rgb(29, 136, 207), rgb(110, 25, 143));
+            text-align: center;
+            color: #fff;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1em;
+            border-radius: 10px;
+        }
+        button{
+            background-color: slateblue;
+            color: #fff;
+            border: none;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 1px 1px 6px black;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: steelblue;
+        }
+        .final-step,
+        .second-step{
+            display: none;
+        }
+        input{
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+        #resultado{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+  <a  href="index.html">Calcular media</a>
+  <a  href="imc.html"> Índice de Massa Corporal (IMC) </a>
+  <a  href="Javascript.html">Lista</a>
+<h2>O método appendChild</h2>
+
+<ul id="myList">
+  <li>Café</li>
+  <li>Suco</li>
+</ul>
+
+<p>Clique em "Anexar" para anexar um item ao final da lista:</p>
+
+<button onclick="myFunction()">Acrescentar</button>
+
+<script>
+function myFunction() {
+
+// Create an "li" node:
+const node = document.createElement("li");
+
+// Create a text node:
+const textnode = document.createTextNode("Água");
+
+// Acrescentar the text node to the "li" node:
+node.appendChild(textnode);
+
+// Acrescentar the "li" node to the list:
+document.getElementById("myList").appendChild(node);
+}
+
+function myFunction() {
+
+// Create an "li" node:
+const node = document.createElement("li");
+
+// Create a text node:
+const textnode = document.createTextNode("Leite");
+
+// Acrescentar the text node to the "li" node:
+node.appendChild(textnode);
+
+// Acrescentar the "li" node to the list:
+document.getElementById("myList").appendChild(node);
+}
+</script>
+
+
+</body>
+</html>
